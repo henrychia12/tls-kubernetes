@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: henrychia-io-tls-staging
+  namespace: cert-manager
+spec:
+  secretName: henrychia-io-tls-staging
+  commonName: '*.henrychia.co.uk'
+  issuerRef:
+    name: letsencrypt-staging
+    kind: ClusterIssuer
